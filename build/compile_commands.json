@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/yackey/Packaging_Investigation/AvtecGmock/build/src/googlemock",
+  "command": "/usr/local/AvtecGcc-1.0/ARM/armv6-eabihf--glibc--stable-2018.02-2/bin/arm-linux-g++  -DSYSTEM_LINUX -I/home/yackey/Packaging_Investigation/AvtecGmock/include/gmock -I/home/yackey/Packaging_Investigation/AvtecGmock/src/googlemock -I/home/yackey/Packaging_Investigation/AvtecGmock/include/gtest -I/home/yackey/Packaging_Investigation/AvtecGmock/src/googletest -I/home/yackey/Packaging_Investigation/AvtecGmock/include   -DLINUX=1 -O0 -g -Wall -fprofile-arcs -ftest-coverage -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -Wwrite-strings -Wno-unused  -fprofile-arcs -ftest-coverage -O0 -g3 -fPIC -MMD -MP   -o CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o -c /home/yackey/Packaging_Investigation/AvtecGmock/src/googletest/src/gtest-all.cc",
+  "file": "/home/yackey/Packaging_Investigation/AvtecGmock/src/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/yackey/Packaging_Investigation/AvtecGmock/build/src/googlemock",
+  "command": "/usr/local/AvtecGcc-1.0/ARM/armv6-eabihf--glibc--stable-2018.02-2/bin/arm-linux-g++  -DSYSTEM_LINUX -I/home/yackey/Packaging_Investigation/AvtecGmock/include/gmock -I/home/yackey/Packaging_Investigation/AvtecGmock/src/googlemock -I/home/yackey/Packaging_Investigation/AvtecGmock/include/gtest -I/home/yackey/Packaging_Investigation/AvtecGmock/src/googletest -I/home/yackey/Packaging_Investigation/AvtecGmock/include   -DLINUX=1 -O0 -g -Wall -fprofile-arcs -ftest-coverage -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -Wwrite-strings -Wno-unused  -fprofile-arcs -ftest-coverage -O0 -g3 -fPIC -MMD -MP   -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/yackey/Packaging_Investigation/AvtecGmock/src/googlemock/src/gmock-all.cc",
+  "file": "/home/yackey/Packaging_Investigation/AvtecGmock/src/googlemock/src/gmock-all.cc"
+}
+]

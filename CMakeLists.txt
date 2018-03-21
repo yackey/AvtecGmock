@@ -1,0 +1,49 @@
+cmake_minimum_required(VERSION 2.6.4)
+
+if (POLICY CMP0048)
+  cmake_policy(SET CMP0048 NEW)
+endif (POLICY CMP0048)
+
+project( AVTEC-GMOCK )
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/build/${CMAKE_TARGET_PROCESSOR}/bin/${CMAKE_BUILD_TYPE})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/build/${CMAKE_TARGET_PROCESSOR}/bin/${CMAKE_BUILD_TYPE})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/${CMAKE_TARGET_PROCESSOR}/bin/${CMAKE_BUILD_TYPE})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/${CMAKE_TARGET_PROCESSOR}/bin/${CMAKE_BUILD_TYPE})
+
+set(ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/${CMAKE_TARGET_PROCESSOR}/bin/${CMAKE_BUILD_TYPE})
+
+# detect operating system
+message(STATUS "We are on a ${CMAKE_SYSTEM_NAME} system")
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+    add_definitions(-DSYSTEM_LINUX)
+endif()
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
+    add_definitions(-DSYSTEM_DARWIN)
+endif()
+if(${CMAKE_SYSTEM_NAME} STREQUAL "AIX")
+    add_definitions(-DSYSTEM_AIX)
+endif()
+if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+    add_definitions(-DSYSTEM_WINDOWS)
+endif()
+
+# detect host processor
+message(STATUS "The host processor is ${CMAKE_HOST_SYSTEM_PROCESSOR}")
+
+message(STATUS "source ${CMAKE_TARGET_PROCESSOR}")
+message(STATUS "source ${CMAKE_CXX_COMPILER_ID}")
+message(STATUS "source ${CMAKE_C_COMPILER}")
+message(STATUS "source ${CMAKE_CXX_COMPILER}")
+message(STATUS "source ${CMAKE_CC_COMPILER}")
+
+message(STATUS "source ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}")
+message(STATUS "source ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+message(STATUS "source ${CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG}")
+message(STATUS "source ${CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG}")
+message(STATUS "source ${BUILD_AEF}")
+message(STATUS "source ${CMAKE_AEF_SOURCE_DIR}")
+
+add_subdirectory( src )
+
